@@ -7,7 +7,7 @@ Sobre
 ===================
 
 
-O Vosgi (Core) é um motor responsável pela interpretação de jogos baseados em texto e python.
+O Vosgi (Core) é um interpretador de jogos baseados em texto puro e python
 
 ----------
 
