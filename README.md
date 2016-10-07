@@ -1,7 +1,7 @@
 
 #SOHNE | Vosgi
 
-[![SOHNE Logo](http://sohne.com.br/img/sohne_vosgi.jpg)](https://vosgi.sohne.com.br/)
+[![SOHNE Logo](https://sohne.com.br/img/sohne-vosgi.jpg)](https://vosgi.sohne.com.br/)
 
 Sobre
 ===================
