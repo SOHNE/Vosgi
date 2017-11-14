@@ -1,50 +1,92 @@
+# **SOHNE &#124;** *Vosgi*
 
-#SOHNE | Vosgi
+O Vosgi**&#185;** é uma engine para jogos baseados, até o momento, puramente/unicamente em texto.
 
-[![SOHNE Logo](https://sohne.com.br/img/sohne-vosgi.jpg)](https://vosgi.sohne.com.br/)
+[![Python Version](https://img.shields.io/badge/Python-2.7.14-green.svg?style=flat-square)](https://www.python.org/downloads/) [![Licença](https://img.shields.io/badge/Licença-GPLv3-blue.svg?style=flat-square)](https://www.gnu.org/licenses/gpl-3.0.pt-br.html) ![Vosgi Core Version](https://img.shields.io/badge/Vosgi_Core-0.4beta-red.svg?style=flat-square&colorA=80007f&colorB=708090)
 
-Sobre
-===================
+![website](https://img.shields.io/badge/-website-purple.svg?style=flat-square&colorB=9B59B6)
 
+## Estrutura geral
 
-O Vosgi (Core) é um interpretador de jogos baseados em texto puro e python
+```text
+./
+|-- __init__.py
+|-- setup.py
+|-- vosgi.py
+|-- config.json
+|-- core (Vosgi Core)
+	/-- __init__.py
+	/-- interpreter.py
+    /-- engine.py
+    /-- tools.py
+    /-- config.py
+    /-- inventory.py
+    /-- items.py
+    /-- exits.py
+    /-- rooms.py
+    /-- scenerys.py
+    /-- talk.py
+    /-- player.py
+|
+|-- vsou (Vou.Sou - Vosgi demo)
+	/-- __init__.py
+    /-- vsou.py
+    /-- main.json
+    /-- vsou.py
+    /-- exits.csv
+    /-- items.csv
+    /-- npcs.csv
+    /-- rooms.csv
+    /-- scenerys.csv
+|
+|-- README.md
+```
 
-----------
+##### O ```vsou.py``` contêm o código necessário para alteração de funções na engine. Assim, é responsável pela dinamicidade do jogo.
 
+## Estrutura de execução
 
-Instalação
--------------
-####Manual por intermédio da clonagem do git
-- Faça a clonagem do git
- - ```$git clone https://github.com/SOHNE/Vosgi.git```
-- Entre no diretório do git
- - ```$cd Vosgi-master```
+```text
+python console.py vsou
+---------------> +--------------------+               +-------------------------+
+                 |                    |               | Vosgi Core              |
+                 |  console.py        |               | --------------          |
+                 |  --------          |               |  > setup engine         |
+                 |   > load vsou.py   |               |  > takes requests       |
+                 |   > set objects    |<------------->|  > setup all objects    |
+                 |     * bound_method | link method's |  > when it's time, call |
+                 |       from game.py |               |  the object dynamic     |
+                 |                    |               |  method                 |
+                 +--------------------+               +-------------------------+
+```
 
- Execução
--------------
-- Execute o arquivo *main.py*:
- - ```$ python main.py```
+## Guia de instalação e execução
 
-----------
+1. Clone este repositório por intermédio do **GitHub**:
 
-# Licença
-The MIT License (MIT)
+   ```sh
+   git clone https://github.com/SOHNE/Vosgi.git
+   ```
+   
+2. Execute o script
 
-Copyright (c) 2016 SOHNE
+## Guia de interpretação
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-the Software, and to permit persons to whom the Software is furnished to do so,
-subject to the following conditions:
+Estude, como forma introdutória, inicialmente 4 arquivos:
+- vosgi.py
+- vsou/vsou.py
+- core/tools.py
+- core/interpreter.py
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+(futuramente, haverá conteúdo indexatório para cada interação e arquivo utilizado pelo Vosgi)
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+## Autor(es)
+
+* **zschzen** - *(elmo)*
+
+## Notas
+*1 - * Lê-se *Vózgui (vˈɔʒɡuj)*
+
+[![readme version](https://img.shields.io/badge//~.-%D0%A4-lightgrey.svg?style=flat-square&colorA=808080&colorB=808080)![readme version](https://img.shields.io/badge/09/17--lightgrey.svg?style=flat-square&colorA=000000&colorB=ffffff)](https://www.readme.sohne.com.br/vosgi)
+---
+
